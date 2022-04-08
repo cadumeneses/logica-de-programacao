@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstrativo de preços</title>
+</head>
+
+<body>
+
+    <!-- Faça um algoritmo/app para ler o código, nome e o preço de 15 produtos, calcular e escrever:
+    - o maior preço lido;
+    - o menor preço lido;
+    - a média aritmética dos preços dos produtos. -->
+
+    <script language="JavaScript">
+        var code;
+        var name;
+        var price;
+        var average = 0;
+        var bigger = 0;
+        var smaller;
+        var cont = 0;
+
+        do {
+            name = String(window.prompt('Insira o nome do produto:'));
+            code = parseInt(window.prompt('Insira o código do produto:'));
+            price = parseFloat(window.prompt('Insira o preco do produto:'));
+
+            if (price > bigger) {
+                bigger = price;
+            }
+
+            if (!smaller) smaller = price;
+
+            if (price < smaller) {
+                smaller = price;
+            }
+
+            average = average + price;
+            
+            cont++;
+            
+        }while (cont < 3) {
+            
+        }
+
+        average = average / 3;
+
+        document.write('<p><b>DEMONSTRATIVO DE PRECO:</b>');
+        document.write('<p>O maior preço é:' + bigger);
+        document.write('<p>O menor preço é:' + smaller);
+        document.write('<p>A média de preço é:' + average);
+    </script>
+
+</body>
+
+</html>
