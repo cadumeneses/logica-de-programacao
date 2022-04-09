@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Salario</title>
+        <meta http-equiv="Content-type" content="text/html" charset="utf-8" >
+    </head>
+    <body>
+        <script language="JavaScript">
+
+// A jornada de trabalho semanal de um funcionário é de 40 horas. O funcionário que trabalhar mais
+// de 40 horas receberá hora extra, cujo cálculo é o valor da hora regular com um acréscimo de 50%.
+// Escreva um algoritmo que leia o número de horas trabalhadas em um mês, o salário por hora e escreva
+// o salário total do funcionário, que deverá ser acrescido das horas extras, caso tenham sido trabalhadas
+// (considere que o mês possua 4 semanas exatas).
+
+            var js_qht ;
+            var js_vht;
+
+            var js_sb;
+            var js_ve = 0;
+            
+            js_qht = parseFloat(window.prompt('Insira quantas horas trabahada/mes:   ' , '00')) ;
+            js_vht = parseFloat(window.prompt('Insira qual valor da hora:' , '00')) ;
+
+            if (js_qht > 160) {
+                js_ve = js_qht - 160;
+                js_ve = js_ve * 1.5;
+                js_sb = (js_qht * js_vht) + (js_vht * js_ve);
+                
+            }else{
+                js_sb = js_qht * js_vht;
+            }
+
+            document.write('<p><b>DEMOSTRATIVO PARA O CALCULO DO SALARIO:</b>');
+
+                document.write('<p>Quantidade de horas trabalhadas: ' + js_qht + '</b>');
+                
+                document.write('<p>Valor da hora trabalhada: ' + js_vht + '</b>');
+
+                document.write("<p>=====================================================");
+                document.write('<p><b>SALARAIO BRUTO:' + js_sb +'</b>') ;
+        </script>
+    </body>
+</html>
